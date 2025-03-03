@@ -4,6 +4,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const path = require("path");
 
+// NHS Vaccine Add-in Frontend Configuration
+// Updated to use production backend URL
+
 async function getHttpsOptions() {
   if (process.env.NODE_ENV === 'production') {
     return {};
