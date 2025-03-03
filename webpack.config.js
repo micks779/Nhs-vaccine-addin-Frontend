@@ -16,6 +16,7 @@ async function getHttpsOptions() {
 module.exports = async (env, options) => {
   const dev = options.mode === "development";
   const httpsOptions = dev ? await getHttpsOptions() : {};
+  const outputDir = "build";
   
   const config = {
     mode: dev ? "development" : "production",
@@ -25,7 +26,7 @@ module.exports = async (env, options) => {
       taskpane: ["./src/index.js"]  // Connects to src/index.js
     },
     output: {
-      path: path.resolve(__dirname, "dist"),
+      path: path.resolve(__dirname, outputDir),
       filename: "[name].[contenthash].js",
       clean: true
     },
@@ -133,7 +134,7 @@ module.exports = async (env, options) => {
     ],
     devServer: {
       static: {
-        directory: path.join(__dirname, "dist"),
+        directory: path.join(__dirname, outputDir),
         publicPath: '/'
       },
       headers: {
