@@ -29,6 +29,27 @@ module.exports = async (env, options) => {
       filename: "[name].[contenthash].js",
       clean: true
     },
+    optimization: {
+      minimize: !dev,
+      splitChunks: {
+        chunks: 'all',
+        minSize: 20000,
+        maxSize: 244000,
+        cacheGroups: {
+          defaultVendors: {
+            test: /[\\/]node_modules[\\/]/,
+            priority: -10,
+            reuseExistingChunk: true,
+            name: 'vendors'
+          },
+          default: {
+            minChunks: 2,
+            priority: -20,
+            reuseExistingChunk: true
+          }
+        }
+      }
+    },
     resolve: {
       extensions: [".js", ".jsx", ".json", ".html"],
       modules: ['node_modules'],
