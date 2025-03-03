@@ -116,7 +116,7 @@ module.exports = async (env, options) => {
       }),
       new webpack.DefinePlugin({
         'process.env': {
-          'REACT_APP_API_URL': JSON.stringify(process.env.REACT_APP_API_URL || 'https://localhost:3001/api/vaccine')
+          'REACT_APP_API_URL': JSON.stringify(process.env.REACT_APP_API_URL || 'https://nhs-vaccine-backend.onrender.com/api/vaccine')
         }
       }),
       new CopyWebpackPlugin({
