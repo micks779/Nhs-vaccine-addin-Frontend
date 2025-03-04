@@ -1,23 +1,36 @@
-# NHS Vaccine Add-in Frontend Deployment Instructions
+# NHS Vaccine Add-in Deployment Instructions
 
-## Deployment to Render
+## Render Deployment Settings
 
-1. Go to the Render dashboard: https://dashboard.render.com
-2. Click "New +" and select "Static Site"
-3. Connect your GitHub repository
-4. Configure the deployment:
-   - Name: `nhs-vaccine-frontend`
-   - Branch: `master` (or your main branch)
-   - Build Command: `npm install && npm run build`
-   - Publish Directory: `build`
-   - Environment Variables: 
-     - `REACT_APP_API_URL`: `https://nhs-vaccine-backend.onrender.com/api/vaccine`
+When deploying this application to Render, please ensure the following settings are configured correctly:
 
-## Important Notes
+### Static Site Configuration
+- **Build Command**: `npm install && npm run build`
+- **Publish Directory**: `build`
+- **Environment Variables**: 
+  - `REACT_APP_API_URL`: `https://nhs-vaccine-backend.onrender.com/api/vaccine`
 
-- The backend API is already deployed at: `https://nhs-vaccine-backend.onrender.com`
-- The webpack configuration has been updated to use this backend URL by default
-- Certificate installation is skipped in production to avoid build errors on Render
+### Important Notes
+1. The `build` directory must be specified as the publish directory, as this is where webpack outputs all the compiled files.
+2. All assets (images, manifest.xml, etc.) are copied to the build directory during the build process.
+3. Make sure the deployment has completed successfully before testing the add-in.
+
+## Troubleshooting 404 Errors
+
+If you encounter 404 errors when loading the add-in:
+
+1. Verify that the deployment has completed successfully on Render.
+2. Check that the publish directory is set to `build` (not `dist` or any other directory).
+3. Confirm that the URLs in the manifest.xml file match your Render deployment URL.
+4. Try accessing the index.html file directly in your browser (e.g., https://nhs-vaccine-frontend.onrender.com/index.html).
+5. Check if assets are accessible by directly accessing them (e.g., https://nhs-vaccine-frontend.onrender.com/assets/logo_64x64.png).
+
+## Verifying Deployment
+
+After deployment, you should be able to access:
+- The main application: https://nhs-vaccine-frontend.onrender.com/index.html
+- Assets: https://nhs-vaccine-frontend.onrender.com/assets/logo_64x64.png
+- Manifest: https://nhs-vaccine-frontend.onrender.com/manifest.xml
 
 ## Local Development
 
