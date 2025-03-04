@@ -10,11 +10,11 @@
   <DefaultLocale>en-GB</DefaultLocale>
   <DisplayName DefaultValue="NHS Vaccination Status"/>
   <Description DefaultValue="Check and update NHS vaccination status"/>
-  <IconUrl DefaultValue="https://localhost:3002/assets/logo_64x64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://localhost:3002/assets/logo_80x80.png"/>
+  <IconUrl DefaultValue="https://nhs-vaccine-frontend.onrender.com/assets/logo_64x64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://nhs-vaccine-frontend.onrender.com/assets/logo_80x80.png"/>
   <SupportUrl DefaultValue="https://www.nhs.uk/support"/>
   <AppDomains>
-    <AppDomain>https://localhost:3002</AppDomain>
+    <AppDomain>https://nhs-vaccine-frontend.onrender.com</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
@@ -27,7 +27,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:3002/index.html"/>
+        <SourceLocation DefaultValue="https://nhs-vaccine-frontend.onrender.com/index.html"/>
         <RequestedHeight>450</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -73,12 +73,12 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="icon-16" DefaultValue="https://localhost:3002/assets/logo_16x16.png"/>
-        <bt:Image id="icon-32" DefaultValue="https://localhost:3002/assets/logo_32x32.png"/>
-        <bt:Image id="icon-80" DefaultValue="https://localhost:3002/assets/logo_80x80.png"/>
+        <bt:Image id="icon-16" DefaultValue="https://nhs-vaccine-frontend.onrender.com/assets/logo_16x16.png"/>
+        <bt:Image id="icon-32" DefaultValue="https://nhs-vaccine-frontend.onrender.com/assets/logo_32x32.png"/>
+        <bt:Image id="icon-80" DefaultValue="https://nhs-vaccine-frontend.onrender.com/assets/logo_80x80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="taskPaneUrl" DefaultValue="https://localhost:3002/index.html"/>
+        <bt:Url id="taskPaneUrl" DefaultValue="https://nhs-vaccine-frontend.onrender.com/index.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="NHS Vaccination"/>
