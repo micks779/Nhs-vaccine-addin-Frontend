@@ -131,6 +131,10 @@ module.exports = async (env, options) => {
           {
             from: "public/assets",  // Connects to icons
             to: "assets"
+          },
+          {
+            from: "public/test.html",  // Test file
+            to: "test.html"
           }
         ]
       })
