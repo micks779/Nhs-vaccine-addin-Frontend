@@ -14,8 +14,9 @@
   <HighResolutionIconUrl DefaultValue="https://nhs-vaccine-frontend.onrender.com/assets/logo_80x80.png"/>
   <SupportUrl DefaultValue="https://www.nhs.uk/support"/>
   <AppDomains>
-    <AppDomain>https://nhs-vaccine-frontend.onrender.com</AppDomain>
-  </AppDomains>
+  <AppDomain>https://nhs-vaccine-frontend.onrender.com</AppDomain>
+  <AppDomain>https://nhs-vaccine-backend.onrender.com</AppDomain>
+</AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
   </Hosts>
@@ -27,7 +28,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://nhs-vaccine-frontend.onrender.com/index.html"/>
+        <SourceLocation DefaultValue="https://nhs-vaccine-frontend.onrender.com/taskpane.html"/>
         <RequestedHeight>450</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -78,7 +79,7 @@
         <bt:Image id="icon-80" DefaultValue="https://nhs-vaccine-frontend.onrender.com/assets/logo_80x80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="taskPaneUrl" DefaultValue="https://nhs-vaccine-frontend.onrender.com/index.html"/>
+        <bt:Url id="taskPaneUrl" DefaultValue="https://nhs-vaccine-frontend.onrender.com/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="NHS Vaccination"/>

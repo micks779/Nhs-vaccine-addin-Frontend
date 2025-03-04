@@ -135,6 +135,10 @@ module.exports = async (env, options) => {
           {
             from: "public/test.html",  // Test file
             to: "test.html"
+          },
+          {
+            from: "public/taskpane.html",  // Taskpane entry point
+            to: "taskpane.html"
           }
         ]
       })
